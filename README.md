@@ -14,6 +14,9 @@ It builds a full end-to-end environment in Snowflake for managing and analyzing 
 This Snowflake notebook (`HACKATHON.ipynb`) automates the full setup of a data pipeline for the **Smart Trip & Safety Concierge** project.  
 It prepares a secure, organized environment for analyzing tourism-related datasets such as weather, traffic, crime, holidays, POIs, and hotels.
 
+### 🔹 IMPORTANT: Detailed Instructions
+1.
+
 ### 🔹 Step-by-Step Summary
 1. **Set context** — Uses the correct role, warehouse, and database (`ACCOUNTADMIN`, `HACK_WH`, `TOURISM_DB`).  
 2. **Create schemas** — Builds `RAW` (raw data) and `CURATED` (processed data) layers.  
@@ -52,7 +55,7 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
 
 ---
 
-# 3) Create the semantic views for the Cortex Analyst.
+# 3) Run the 
 https://drive.google.com/file/d/19Q6E85FlF-Pt1kXsgGs9E0ZzKEqF93JS/view?usp=sharing
 ---
 
