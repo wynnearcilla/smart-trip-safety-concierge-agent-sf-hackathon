@@ -232,16 +232,18 @@ The TRANSIT_NEXT_DEPARTURE_SEM semantic view, located in TOURISM_DB.CURATED, ser
      - This tool contains and will provide the information of different activities and accommodations of all the cities in Metro Manila
 
 5. Add 'BOOKING_AGREEMENT' custom tool with the following settings. 
+     ![Custom Tool Identifier](images/cti_booking_agreement.png)
      ![Booking Agreement 1](images/booking_agreement_1.png)
      ![Booking Agreement 2](images/booking_agreement_2.png)
      ![Booking Agreement 3](images/booking_agreement_3.png)
      ![Booking Agreement 4](images/booking_agreement_4.png)
 
-7. Add 'INSERT_BOOKING' custom tool with the following settings.
+6. Add 'INSERT_BOOKING' custom tool with the following settings.
+     ![Custom Tool Identifier](images/cti_insert_booking.png)
      ![Insert Booking 1](images/insert_booking_1.png)
      ![Insert Booking 2](images/insert_booking_2.png)
 
-9. For the Orchestration, copy the following text as the Planning Instructions.
+7. For the Orchestration, copy the following text as the Planning Instructions.
 
 GENERAL INSTRUCTIONS:
 - Focus responses strictly on the available datasets provided; do not reference information outside of the datasets.
