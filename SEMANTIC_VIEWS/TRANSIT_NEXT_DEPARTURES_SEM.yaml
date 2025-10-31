@@ -1,0 +1,85 @@
+name: TRANSIT_NEXT_DEPARTURES_SEM
+tables:
+  - name: TRANSIT_NEXT_DEPARTURES
+    description: This view provides a list of upcoming departures for public transportation trips between 7:00 AM and 10:00 AM, including the trip ID, stop ID, arrival time, stop name, location, route ID, and trip headsign.
+    base_table:
+      database: TOURISM_DB
+      schema: CURATED
+      table: TRANSIT_NEXT_DEPARTURES
+    dimensions:
+      - name: ARRIVAL_TIME
+        description: The time at which a transit vehicle is scheduled to arrive at a stop.
+        expr: ARRIVAL_TIME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - '08:10:00'
+          - '07:00:00'
+          - '07:45:00'
+      - name: ROUTE_ID
+        description: Unique identifier for the route of the transit vehicle, such as a bus or train line, that the next departure belongs to.
+        expr: ROUTE_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - EDSA
+          - MRT3
+          - P2P
+      - name: STOP_ID
+        description: Unique identifier for a transit stop, such as a bus stop or train station, where passengers can board or alight from a transit vehicle.
+        expr: STOP_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - MRT-TAFT
+          - P2P-ALABANG
+          - P2P-ORTH
+      - name: STOP_NAME
+        description: The name of the bus stop or station where the transit vehicle will make its next departure.
+        expr: STOP_NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - MRT3 Taft Ave
+          - P2P Alabang
+          - P2P Ortigas
+      - name: TRIP_HEADSIGN
+        description: The direction or destination of the transit trip, as displayed on the vehicle or at the stop.
+        expr: TRIP_HEADSIGN
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - MOA→Quezon Ave
+          - Alabang→Ortigas
+          - Taft→Cubao NB
+      - name: TRIP_ID
+        description: Unique identifier for a specific trip or journey made by a transit vehicle, combining route and schedule information.
+        expr: TRIP_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - P2P-S-0700
+          - MRT3-N-0800
+          - BRT-AYALA-N-0800
+    time_dimensions:
+      - name: ARR_T
+        description: The scheduled arrival time of the next transit vehicle.
+        expr: ARR_T
+        data_type: TIME(9)
+        sample_values:
+          - '08:20:00'
+          - '07:00:00'
+          - '08:00:00'
+    facts:
+      - name: STOP_LAT
+        description: Latitude of the transit stop.
+        expr: STOP_LAT
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '14.5373'
+          - '14.417'
+          - '14.5864'
+      - name: STOP_LON
+        description: Longitude of the transit stop.
+        expr: STOP_LON
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '121.044'
+          - '121'
+          - '121.058'
