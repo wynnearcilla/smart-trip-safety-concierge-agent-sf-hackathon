@@ -1,6 +1,6 @@
 # smart-trip-analyst-sf-hackathon
 
-# 🧭 Smart Trip & Safety Concierge — Snowflake Data Pipeline
+# 🧭 Smart Trip & Safety Concierge Agent - Snowflake Inteligence
 
 This repository contains the **Snowflake SQL setup and data pipeline** used for the *Smart Trip & Safety Concierge Hackathon* project.  
 It builds a full end-to-end environment in Snowflake for managing and analyzing **tourism-related datasets** — including weather, crime, traffic, holidays, points of interest, and hotels.
@@ -9,7 +9,7 @@ It builds a full end-to-end environment in Snowflake for managing and analyzing 
 
 ## 🚀 STEP-BY-STEP INSTRUCTIONS
 
-# 1) Run the (`HACKATHON.ipynb`) file.
+# 1) Run the (`HACKATHON.ipynb`) file in Snowflake to setup the data environment.
 
 This Snowflake notebook (`HACKATHON.ipynb`) automates the full setup of a data pipeline for the **Smart Trip & Safety Concierge** project.  
 It prepares a secure, organized environment for analyzing tourism-related datasets such as weather, traffic, crime, holidays, POIs, and hotels.
@@ -27,11 +27,28 @@ It prepares a secure, organized environment for analyzing tourism-related datase
 10. **Validate access** — Switches to `CORTEX_APP_ROLE` and confirms proper permissions.  
 
 ✅ **Result:**  
-A ready-to-use Snowflake data environment for analytics and visualization — secure, structured, and role-based.
+A ready-to-use Snowflake data environment for analytics and visualization — secure, structured, and role-based. **There are 8 created Views which will be used as Logical Tables for the Semantic Views in Cortex Analyst.**
 
 ---
 
-# 2) Parse the documents for Cortex Search.
+# 2) In Cortex Analyst, upload the YAML files found in [SEMANTIC_VIEWS/](SEMANTIC_VIEWS/) to create the Semantic Views.
+
+### 🔹 Detailed Instructions
+1. Download the YAML files in [SEMANTIC_VIEWS/](SEMANTIC_VIEWS/) to your local computer.
+2. In the Snowflake UI, go to AI & ML --> Cortex Analyst.
+3. Select the Warehouse 'HACK_WH'.
+4. Upload the YAML files to create the Semantic Views.
+5. Set the Database & Schema to 'TOURISM_DB.CURATED' and the Stage to 'SEMANTIC_UPLOAD_STAGE'.
+6. Ensure that the following 8 Semantic Views are successfully created.
+     - WEATHER_SUITABILITY_SEM
+     - SAFETY_INDEX_SEM
+     - HOTEL_RECO_SEM
+     - POI_SEM
+     - HOLIDAYS_SEM
+     - TRAFFIC_LATEST_SEM
+     - TRAFFIC_ALERTS_SEM
+     - TRANSIT_NEXT_DEPARTURES_SEM
+7. Note: The created Views from Step 1 were used as Logical Tables for the Semantic Views. Each View directly corresponds to a Semantic View (e.g., WEATHER_SUITABILITY --> WEATHER_SUITABILITY_SEM).
 
 ---
 
