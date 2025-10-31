@@ -15,9 +15,22 @@ This Snowflake notebook (`HACKATHON.ipynb`) automates the full setup of a data p
 It prepares a secure, organized environment for analyzing tourism-related datasets such as weather, traffic, crime, holidays, POIs, and hotels.
 
 ### 🔹 IMPORTANT: Detailed Instructions
-1.
+1. In the ('Hackathon.ipynb') notebook, run the first 4 blocks of code: 'SCHEMA', 'ROLE', 'STG', and 'RAW_TBLS'.
+2. Download the .csv and .txt files found in [CSV_TXT_FILES/](CSV_TXT_FILES/) to your local computer.
+3. Upload the following files to their corresponding Stages under 'TOURISM_DB.RAW'.
+     - crime_incidents.csv        -->  STAGE_CRIME
+     - hotels.csv                 -->  STAGE_HOTELS
+     - ph_holidays_2025_2026.csv  -->  STAGE_HOLIDAYS
+     - poi_opentripmap.csv        -->  STAGE_POI
+     - traffic_incidents.csv      -->  STAGE_TRAFFIC
+     - traffic_speeds.csv         -->  STAGE_TRAFFIC
+     - weather_hourly.csv         -->  STAGE_WEATHER
+     - gtfs_stop_times_expanded   -->  STAGE_GTFS
+     - gtfs_stops_expanded        -->  STAGE_GTFS
+     - gtfs_trips_expanded        -->  STAGE_GTFS
+5. Run the rest of the code in the  ('Hackathon.ipynb') notebook.
 
-### 🔹 Step-by-Step Summary
+### 🔹 This part does not need execution. It just summarizes what the (`HACKATHON.ipynb`) code executed.
 1. **Set context** — Uses the correct role, warehouse, and database (`ACCOUNTADMIN`, `HACK_WH`, `TOURISM_DB`).  
 2. **Create schemas** — Builds `RAW` (raw data) and `CURATED` (processed data) layers.  
 3. **Create role** — Defines `CORTEX_APP_ROLE` for controlled analyst access.  
