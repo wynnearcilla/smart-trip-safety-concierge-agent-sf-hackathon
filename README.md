@@ -120,14 +120,12 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
      - `POI_SEM`
      - `HOLIDAYS_SEM`
             - HOLIDAYS:
-               - Database: TOURISM_DB, Schema: CURATED
-               - Contains information about public holidays in the Philippines, including both local and English names of the holidays and their corresponding dates.
-               - Useful for business planning, scheduling, and time-off management in the Philippine context.
-               - LIST OF COLUMNS: LOCAL_NAME (holiday name in local language), NAME (holiday name in English), DATE (date of the holiday)
-
+               Database: TOURISM_DB, Schema: CURATED
+               Contains information about public holidays in the Philippines, including both local and English names of the holidays and their corresponding dates.
+               Useful for business planning, scheduling, and time-off management in the Philippine context.
+               LIST OF COLUMNS: LOCAL_NAME (holiday name in local language), NAME (holiday name in English), DATE (date of the holiday)
                REASONING:
                This semantic view focuses on Philippine holiday information management, providing a comprehensive view of public holidays with their dates and names in both local and English versions. The structure allows for easy holiday tracking and scheduling, which is essential for businesses operating in the Philippines. The view is particularly useful for organizations that need to manage schedules, plan operations, and handle time-off requests around Philippine holidays.
-
                DESCRIPTION:
                The HOLIDAY_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized repository for Philippine public holiday information. It maintains a comprehensive list of holidays with their corresponding dates and provides both local and English names for each holiday, making it valuable for both domestic and international users. The view supports various business operations including workforce planning, scheduling, and holiday-related activities management. This semantic view is particularly useful for queries related to holiday dates, names, and cultural significance in the Philippine context, enabling efficient holiday-based planning and operations management.
      - `TRAFFIC_LATEST_SEM`
