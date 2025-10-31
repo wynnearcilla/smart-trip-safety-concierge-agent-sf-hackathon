@@ -1,4 +1,4 @@
-# smart-trip-analyst-sf-hackathon
+# smart-trip-safety-concierge-agent-sf-hackathon
 
 # 🧭 Smart Trip & Safety Concierge Agent - Snowflake Inteligence
 
