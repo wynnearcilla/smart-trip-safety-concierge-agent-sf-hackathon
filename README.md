@@ -99,6 +99,7 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
 
 ### 🔹 Detailed Instructions
 1. Create a new Cortex Agent. Set the name and display name to `TOURAGENT`.
+
 2. Copy the following instructions to the Response Instructions.
      - Always use a warm, welcoming, and friendly tone in responses.
      - Be suggestive (example: if you want to do these kind of activities... then here are... , if you are into..., then this..) 
@@ -113,13 +114,66 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
      - Always thank users for their questions and offer further assistance at the end of each response.
      - If a recommendation involves risk (weather, safety, etc.), remind users to check with local authorities for the latest updates.
      - When sharing information, be empathetic to travelers’ needs, including accessibility, family, or special interests.
+
 3. For the Cortex Analyst tools, add all the 8 Semantic Views with their corresponding `Description`.
      - `WEATHER_SUITABILITY_SEM`
+
+WEATHER_SUITABILITY:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains forecasted weather information and suitability assessments for outdoor and indoor activities in Philippine cities, including temperature, precipitation probability, wind speed, and tailored recommendations.
+- Useful for travel planning, activity selection, and providing safety and comfort guidance to tourists and residents based on current and upcoming weather conditions.
+- LIST OF COLUMNS: LAT (latitude), LON (longitude), FORECAST_TS (forecast timestamp), TEMP_C (temperature in Celsius), PRECIP_PROB (precipitation probability), WIND_KPH (wind speed in kph), CITY (city name), SUITABILITY (suitability score), RECO (activity recommendation)
+
+REASONING:
+This semantic view is designed to help users evaluate weather conditions for specific locations and times, supporting informed decisions about outdoor and indoor activities. By providing suitability scores and actionable recommendations, it enables travelers and locals to plan comfortably and safely. The inclusion of granular forecast data and city-level aggregation ensures relevant, up-to-date advice tailored to user needs.
+
+DESCRIPTION:
+The WEATHER_SUITABILITY_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized source for weather suitability and activity guidance in the Philippines. Each record details the forecasted temperature, precipitation, wind, and provides a suitability score with a corresponding recommendation for indoor or outdoor activities. This view is especially valuable for queries related to weather-based planning, ensuring travelers and residents can optimize their schedules for safety, enjoyment, and comfort.
+
      - `SAFETY_INDEX_SEM`
+
+SAFETY_INDEX:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains incident data for major Philippine cities and barangays, including the date of occurrence and the number of incidents reported per day.
+- Useful for assessing local safety conditions, travel risk management, and providing safety guidance to tourists and residents.
+- LIST OF COLUMNS: CITY (city name), BARANGAY (local district), D (date of incident), INCIDENTS_DAY (number of incidents reported that day)
+
+REASONING:
+This semantic view is designed for monitoring and evaluating safety across different urban areas in the Philippines. It provides timely information on reported incidents, categorized by city and barangay, supporting travel safety assessments and helping travelers make informed decisions about their destinations. The structure facilitates trend analysis and risk evaluation, which is useful for both tourists and local authorities concerned with public safety.
+
+DESCRIPTION:
+The SAFETY_INDEX_SEM semantic view, located in TOURISM_DB.CURATED, acts as a centralized source for incident reporting and safety monitoring in Philippine cities and barangays. With daily records of incidents, this view enables users to evaluate the relative safety of different locations, plan safer travel routes, and stay updated on recent safety trends. It is particularly valuable for queries relating to local risk assessment, travel advisories, and situational awareness for visitors and residents.
+  
      - `HOTEL_RECO_SEM`
+
+HOTEL_RECO:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains detailed records of hotel accommodations in key Philippine cities, including hotel names, locations, star ratings, nightly prices in Philippine Peso, refund policies, guest ratings, amenities, safety scores, geographic coordinates, and an overall computed score.
+- Useful for travel planning, accommodation selection, safety assessment, and personalized recommendations for tourists and business travelers.
+- LIST OF COLUMNS: HOTEL_ID (unique hotel identifier), NAME (hotel name), CITY (city location), AREA (specific area or neighborhood), STARS (star rating), PRICE_NIGHT_PHP (nightly price in ₱), REFUNDABLE (refund policy), RATING (guest review score), AMENITIES (list of amenities), SAFETY_SCORE (safety assessment score), LAT (latitude), LON (longitude), SCORE (overall hotel score)
+
+REASONING:
+This semantic view is designed for comprehensive hotel information management and recommendation, supporting the Philippine tourism sector. It enables users to compare accommodations based on price, safety, amenities, and guest ratings, empowering informed decision-making for travel stays. The inclusion of safety scores and location coordinates further enhances safe and convenient travel planning, while the amenity list matches hotel offerings to traveler preferences and needs.
+
+DESCRIPTION:
+The HOTEL_RECO_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized resource for hotel information relevant to both tourists and business travelers in the Philippines. Each record features key details such as location, nightly price, star rating, refund policy, guest ratings, amenities, and safety scores. This view allows users to efficiently filter and compare hotels according to their requirements and safety considerations. The geographic coordinates and computed scores support integration with mapping and recommendation systems, making HOTEL_RECO_SEM especially valuable for queries about accommodation options, pricing, safety, proximity to attractions, and personalized travel planning.
+
      - `POI_SEM`
+
+POINT_OF_INTEREST:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains curated information about major points of interest in the Philippines, including names, types (kinds), geographic coordinates, visitor ratings, and popularity scores.
+- Useful for travel planning, attraction recommendation, and itinerary building for leisure and cultural tourism.
+- LIST OF COLUMNS: POI_ID (unique identifier), NAME (point of interest name), KINDS (type/category such as museum or cultural site), LAT (latitude), LON (longitude), RATE (visitor rating), POPULARITY_SCORE (popularity index)
+
+REASONING:
+This semantic view is designed to help users easily discover and evaluate noteworthy attractions and cultural sites in the Philippines. It provides concise details for each point of interest, including type, location, and visitor ratings, supporting personalized travel recommendations and itinerary planning. The inclusion of popularity scores and geographic data enables effective filtering and mapping, enhancing the overall travel experience for both tourists and locals.
+
+DESCRIPTION:
+The POINT_OF_INTEREST_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized catalog of key attractions and cultural sites throughout the Philippines. Each entry includes a unique identifier, name, type, rating, popularity score, and coordinates, making it easy to search for and compare various destinations. This view is especially valuable for queries related to top-rated museums, cultural venues, and tourist hotspots, facilitating efficient attraction discovery and itinerary customization for travelers seeking memorable experiences.
+
      - `HOLIDAYS_SEM`
-<div style="height:200px; overflow-y:auto; background:#f6f8fa; padding:10px; border-radius:8px;">
+
 HOLIDAYS:
 - Database: TOURISM_DB, Schema: CURATED
 - Contains information about public holidays in the Philippines, including both local and English names of the holidays and their corresponding dates.
@@ -131,12 +185,102 @@ This semantic view focuses on Philippine holiday information management, providi
 
 DESCRIPTION:
 The HOLIDAY_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized repository for Philippine public holiday information. It maintains a comprehensive list of holidays with their corresponding dates and provides both local and English names for each holiday, making it valuable for both domestic and international users. The view supports various business operations including workforce planning, scheduling, and holiday-related activities management. This semantic view is particularly useful for queries related to holiday dates, names, and cultural significance in the Philippine context, enabling efficient holiday-based planning and operations management.
-</div>
 
      - `TRAFFIC_LATEST_SEM`
+
+TRAFFIC_LATEST:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains the most recent traffic status and speed data for major road segments in the Philippines, including route names, geographic coordinates, timestamps, vehicle speeds, and congestion levels.
+- Useful for real-time travel planning, route optimization, and providing up-to-date road condition information to drivers and travelers.
+- LIST OF COLUMNS: SEGMENT_ID (unique road segment identifier), ROAD_NAME (road or route name), START_LAT (starting latitude), START_LON (starting longitude), END_LAT (ending latitude), END_LON (ending longitude), AS_OF_TS (timestamp of latest update), SPEED_KPH (average speed in kph), CONGESTION_LEVEL (traffic congestion status)
+
+REASONING:
+This semantic view enables quick assessments of current traffic flows and congestion across key urban corridors in the Philippines. By including speed data, route details, and congestion levels, it supports informed travel decisions and effective route planning. Timestamped updates allow users to monitor trends and respond to changing road conditions.
+
+DESCRIPTION:
+The TRAFFIC_LATEST_SEM semantic view, located in TOURISM_DB.CURATED, functions as a centralized source for real-time traffic information on major Philippine roads. Each entry provides details about the route, start/end coordinates, the latest speed and congestion level, and the time of the update. This view is especially valuable for queries related to current travel times, congestion hotspots, and optimal routing, helping users navigate efficiently and avoid delays.
+
      - `TRAFFIC_ALERTS_SEM`
+
+TRAFFIC_ALERTS:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains real-time and historical traffic alerts for major Philippine road segments, including alert type, severity, date and time, and precise location coordinates.
+- Useful for travel safety, route planning, and providing timely notifications about road conditions to drivers and travelers.
+- LIST OF COLUMNS: SEGMENT_ID (unique road segment identifier), ROAD_NAME (road or route name), AS_OF_TS (alert timestamp), TYPE (type of traffic event, e.g., roadwork, breakdown, flooded lane), SEVERITY (level of impact), LAT (latitude), LON (longitude)
+
+REASONING:
+This semantic view is designed to inform users about current and recent traffic disruptions across key roadways in the Philippines. By including event types, severity levels, and specific locations, it supports proactive travel planning and helps users avoid delays or hazards. The timestamped records allow for trend analysis and improve travel advisories by showing both active and historical alerts.
+
+DESCRIPTION:
+The TRAFFIC_ALERTS_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized source for traffic event notifications on Philippine roads. Each alert provides essential details such as the affected route, nature of the incident, severity, and exact position. This view is especially valuable for queries related to road closures, construction, breakdowns, and other disruptions, enabling users to make informed decisions about travel routes and times, and supporting safe and efficient journey planning.
+
      - `TRANSIT_NEXT_DEPARTURES_SEM`
-5. For the Cortex Search Services, add the `SEARCH_PDF`. 
+
+TRANSIT_NEXT_DEPARTURE:
+- Database: TOURISM_DB, Schema: CURATED
+- Contains upcoming public transportation departures for key Philippine transit routes, including trip and stop identifiers, scheduled arrival times, stop names and locations, route information, and destination heads.
+- Useful for transit planning, itinerary scheduling, and providing real-time travel options to tourists and commuters.
+- LIST OF COLUMNS: TRIP_ID (unique trip identifier), STOP_ID (unique stop identifier), ARRIVAL_TIME (scheduled arrival time), ARR_T (actual arrival time), STOP_NAME (name of the transit stop), STOP_LAT (latitude), STOP_LON (longitude), ROUTE_ID (route identifier), TRIP_HEADSIGN (route/direction headsign)
+
+REASONING:
+This semantic view is designed to help users easily access upcoming departures for buses, trains, and other transit modes in the Philippines. It provides essential scheduling and location data for each trip and stop, supporting efficient itinerary planning and real-time travel choices for both tourists and daily commuters. The inclusion of route and headsign information enables clear navigation and route selection.
+
+DESCRIPTION:
+The TRANSIT_NEXT_DEPARTURE_SEM semantic view, located in TOURISM_DB.CURATED, serves as a centralized source for public transportation departure information. Each record details the trip and stop identifiers, arrival times, stop locations, routes, and destination heads, allowing users to quickly find and plan their next transit move. This view is especially valuable for queries related to upcoming departures, transit schedules, and optimal route selections, helping travelers manage their time and navigate the transit system with ease.
+
+4. For the Cortex Search Services, add the `SEARCH_PDF` with the following `Description`. Set the `PAGE_CONTENT` as the ID column and the `FILENAME' as the Title column.
+     - This tool contains and will provide the information of different activities and accommodations of all the cities in Metro Manila
+
+5. Add 'BOOKING_AGREEMENT' custom tool with the following settings.
+![Alt text](images/diagram.png)
+
+6. Add 'INSERT_BOOKING' custom tool with the following settings.
+![Alt text](images/diagram.png)
+
+7. For the Orchestration, copy the following text as the Planning Instructions.
+
+GENERAL INSTRUCTIONS:
+- Focus responses strictly on the available datasets provided; do not reference information outside of the datasets.
+- If the location is not in the dataset, don't force it
+- Consider all the factors such as holiday, hotel, places, and activities recommendations, weather suitability, traffic reports, and safety index in the place first in every question.
+- Use data from cortex search first (provide the source), followed by data from cortex analyst 
+- Always check first if the answer is searchable within our dataset. if not, don't continue looking for imaginary answers.
+- Be suggestive (example: if you want to do... then this, if you are into..., then this..)
+- Carefully read and interpret each question before answering; only respond to questions that originate directly from the user and only respond to one question at a time. 
+- Understand the question of the user, focus on the specific file name from cortex analyst based on the place they mentioned
+- If no relevant data is present, do not provide any answer or suggestion and do not use local or general knowledge in your response.
+- Begin each response with a concise summary of the main finding or recommendation, then present key suggestions in clear bullet points immediately following the summary.
+- End each response with a practical recommendation for the user.
+- Format all monetary values using ₱ (Philippine Peso), rounded to 2 decimal places.
+- Do not state safety index, precipitation probability, or hotel safety score as raw values. however, when providing a these, explain why
+
+HOLIDAY INQUIRIES:
+- Reference the `HOLIDAYS_SEM` semantic view for holiday-related responses only.
+- Always include both the local holiday name and its corresponding date.
+
+HOTEL RECOMMENDATIONS:
+- Derive all hotel suggestions exclusively from the `HOTEL_RECO` semantic view.
+- Always mention: hotel name, area, star rating, price per night, and notable amenities.
+
+POINTS OF INTEREST:
+- Use the `POI_SEM` semantic view for information and recommendations about points of interest.
+
+SAFETY INDEX:
+- If the total daily incidents in an area exceed 5, proactively suggest alternative locations for safety.
+
+TRAFFIC ALERTS:
+- Clearly highlight the route, current traffic status, and next available times.
+- Communicate the type of alert, its severity, specific location, and any history of similar alerts.
+
+WEATHER SUITABILITY:
+- Always check the weather dataset to see weather forecast
+- If precipitation probability exceeds 60%, recommend indoor places or activities.
+
+8. Add the following questions as Example Questions.
+     - Create a 3-day travel itinerary for Makati, including hotel recommendations, points of interest, and dining options.
+     - What are the top 5 hotels in BGC with high safety scores and family-friendly amenities?
+     - Are there any holidays in Manila this month that might affect sightseeing or business hours?
+     - Suggest indoor activities in Manila for a rainy day, including museums and cafes.
 
 ---
 
