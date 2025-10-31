@@ -1,26 +1,23 @@
 # smart-trip-analyst-sf-hackathon
 
-This repository contains a complete Snowflake implementation for the Smart Trip & Safety Concierge hackathon project.
-It sets up database schemas, roles, file formats, stages, and curated analytical tables for integrating multiple tourism-related datasets such as weather, traffic, crime, holidays, points of interest, and hotels.
+# 🧭 Smart Trip & Safety Concierge — Snowflake Data Pipeline
 
-Key Features:
+This repository contains the **Snowflake SQL setup and data pipeline** used for the *Smart Trip & Safety Concierge Hackathon* project.  
+It builds a full end-to-end environment in Snowflake for managing and analyzing **tourism-related datasets** — including weather, crime, traffic, holidays, points of interest, and hotels.
 
-  Automated Snowflake environment setup (roles, schemas, permissions)
+---
 
-  Configurable RAW and CURATED layers for data management
+## 🚀 Step-by-Step Instructions
 
-  Predefined stages and file formats for CSV ingestion
+1) The Jupyter Notebook **`HACKATHON.ipynb`** contains SQL scripts that:
 
-  Example SQL transformations for analytics-ready datasets
+  1. Configure the Snowflake environment (roles, warehouses, schemas)
+  2. Create secure role-based access for analysts
+  3. Define file formats and staging areas for raw CSV uploads
+  4. Load data into the RAW layer
+  5. Transform and clean data into CURATED analytical tables
+  6. Validate access through a dedicated Cortex role
 
-  Role-based access via CORTEX_APP_ROLE for secure data consumption
+This setup allows analysts and applications to easily query curated tourism data for smart trip recommendations, safety analytics, and travel insights.
 
-Usage:
-
-1) Run the provided Snowflake SQL blocks in order.
-
-2) Upload your raw CSV files to the defined stages.
-
-3) Execute transformation scripts to build curated analytical tables.
-
-4) Query or visualize the curated datasets using Snowflake Cortex or BI tools.
+2)
