@@ -1,0 +1,75 @@
+name: TRAFFIC_ALERTS_SEM
+tables:
+  - name: TRAFFIC_ALERTS
+    description: This view provides a 7-day rolling window of traffic alerts, including road name, incident type, severity, and location, to help monitor and manage current traffic conditions.
+    base_table:
+      database: TOURISM_DB
+      schema: CURATED
+      table: TRAFFIC_ALERTS
+    dimensions:
+      - name: ROAD_NAME
+        expr: ROAD_NAME
+        data_type: VARCHAR(16777216)
+      - name: SEGMENT_ID
+        expr: SEGMENT_ID
+        data_type: VARCHAR(16777216)
+      - name: SEVERITY
+        expr: SEVERITY
+        data_type: VARCHAR(16777216)
+      - name: TYPE
+        expr: TYPE
+        data_type: VARCHAR(16777216)
+    time_dimensions:
+      - name: AS_OF_TS
+        expr: AS_OF_TS
+        data_type: TIMESTAMP_TZ(9)
+    facts:
+      - name: LAT
+        expr: LAT
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: LON
+        expr: LON
+        data_type: FLOAT
+        access_modifier: public_access
+  - name: TRAFFIC_LATEST
+    description: This view provides the latest traffic speed data for each road segment, including the road name, start and end coordinates, and congestion level, giving a real-time snapshot of current traffic conditions.
+    base_table:
+      database: TOURISM_DB
+      schema: CURATED
+      table: TRAFFIC_LATEST
+    dimensions:
+      - name: CONGESTION_LEVEL
+        expr: CONGESTION_LEVEL
+        data_type: VARCHAR(16777216)
+      - name: ROAD_NAME
+        expr: ROAD_NAME
+        data_type: VARCHAR(16777216)
+      - name: SEGMENT_ID
+        expr: SEGMENT_ID
+        data_type: VARCHAR(16777216)
+    time_dimensions:
+      - name: AS_OF_TS
+        expr: AS_OF_TS
+        data_type: TIMESTAMP_TZ(9)
+    facts:
+      - name: END_LAT
+        expr: END_LAT
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: END_LON
+        expr: END_LON
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: SPEED_KPH
+        expr: SPEED_KPH
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: START_LAT
+        expr: START_LAT
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: START_LON
+        expr: START_LON
+        data_type: FLOAT
+        access_modifier: public_access

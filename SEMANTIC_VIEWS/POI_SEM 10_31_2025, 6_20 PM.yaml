@@ -1,0 +1,70 @@
+name: POI_SEM
+tables:
+  - name: POI
+    description: This view provides a curated dataset of Points of Interest (POIs) with relevant attributes, including a calculated popularity score based on the rating, to support analysis and decision-making for tourism-related applications.
+    base_table:
+      database: TOURISM_DB
+      schema: CURATED
+      table: POI
+    dimensions:
+      - name: KINDS
+        description: The KINDS column categorizes points of interest (POIs) into distinct types, such as parks and outdoor spaces, food establishments and restaurants, and cultural institutions like museums.
+        expr: KINDS
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - parks,outdoors
+          - foods,restaurants
+          - museums,cultural
+      - name: NAME
+        description: The name of a point of interest (POI) such as a museum or landmark.
+        expr: NAME
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - Ayala Museum
+          - National Museum of Fine Arts
+          - The Mind Museum
+      - name: POI_ID
+        description: Unique identifier for a point of interest.
+        expr: POI_ID
+        data_type: VARCHAR(16777216)
+        sample_values:
+          - POI-001
+          - POI-002
+          - POI-003
+    facts:
+      - name: LAT
+        description: Latitude of the point of interest.
+        expr: LAT
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '14.5536'
+          - '14.5505'
+          - '14.5889'
+      - name: LON
+        description: Longitude coordinate of a point of interest.
+        expr: LON
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '121.0544'
+          - '120.9819'
+          - '121.0223'
+      - name: POPULARITY_SCORE
+        description: A score indicating the relative popularity of a point of interest, ranging from 0 to 10, with higher values indicating greater popularity.
+        expr: POPULARITY_SCORE
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '9'
+          - '8.9'
+          - '9.2'
+      - name: RATE
+        description: The rate at which a point of interest (POI) is rated by users, on a scale that appears to be out of 10, with higher values indicating a more favorable rating.
+        expr: RATE
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '9'
+          - '9.2'
+          - '8.9'

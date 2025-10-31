@@ -1,0 +1,56 @@
+name: HOTEL_RECO_SEM
+tables:
+  - name: HOTEL_RECO
+    description: This view provides a curated list of hotels with a calculated score based on their rating, star rating, and safety score, allowing for easy comparison and recommendation of hotels to customers.
+    base_table:
+      database: TOURISM_DB
+      schema: CURATED
+      table: HOTEL_RECO
+    dimensions:
+      - name: AMENITIES
+        expr: AMENITIES
+        data_type: VARCHAR(16777216)
+      - name: AREA
+        expr: AREA
+        data_type: VARCHAR(16777216)
+      - name: CITY
+        expr: CITY
+        data_type: VARCHAR(16777216)
+      - name: HOTEL_ID
+        expr: HOTEL_ID
+        data_type: VARCHAR(16777216)
+      - name: NAME
+        expr: NAME
+        data_type: VARCHAR(16777216)
+      - name: REFUNDABLE
+        expr: REFUNDABLE
+        data_type: BOOLEAN
+    facts:
+      - name: LAT
+        expr: LAT
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: LON
+        expr: LON
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: PRICE_NIGHT_PHP
+        expr: PRICE_NIGHT_PHP
+        data_type: NUMBER(10,2)
+        access_modifier: public_access
+      - name: RATING
+        expr: RATING
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: SAFETY_SCORE
+        expr: SAFETY_SCORE
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: SCORE
+        expr: SCORE
+        data_type: FLOAT
+        access_modifier: public_access
+      - name: STARS
+        expr: STARS
+        data_type: NUMBER(38,0)
+        access_modifier: public_access

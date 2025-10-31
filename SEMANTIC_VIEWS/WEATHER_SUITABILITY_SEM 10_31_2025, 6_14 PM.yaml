@@ -1,0 +1,93 @@
+name: WEATHER_SUITABILITY_SEM
+tables:
+  - name: WEATHER_SUITABILITY
+    description: This view provides a suitability score for outdoor activities based on weather forecasts, taking into account precipitation probability and wind speed. The score ranges from 0 to 1, with higher values indicating more favorable conditions. The view also includes a recommendation for outdoor activities based on the precipitation probability, suggesting "Good for outdoor" if the probability is below 60% and "Better indoor" otherwise.
+    base_table:
+      database: TOURISM_DB
+      schema: CURATED
+      table: WEATHER_SUITABILITY
+    dimensions:
+      - name: CITY
+        synonyms:
+          - geographical_location
+          - location
+          - metropolis
+          - municipality
+          - settlement
+          - town
+          - urban_area
+          - urban_center
+        description: The city for which the weather suitability data is recorded.
+        expr: CITY
+        data_type: VARCHAR(134217728)
+      - name: RECO
+        description: 'This column indicates the suitability of the weather for various activities, with two possible values: "Better indoor" suggesting that the weather is more conducive to indoor activities, and "Good for outdoor" suggesting that the weather is suitable for outdoor activities.'
+        expr: RECO
+        data_type: VARCHAR(16)
+        sample_values:
+          - Better indoor
+          - Good for outdoor
+    time_dimensions:
+      - name: FORECAST_TS
+        description: Timestamp representing the date and time of the weather forecast.
+        expr: FORECAST_TS
+        data_type: TIMESTAMP_TZ(9)
+        sample_values:
+          - 2025-07-01T00:00:00.000+0800
+          - 2025-07-01T09:00:00.000+0800
+          - 2025-07-02T00:00:00.000+0800
+    facts:
+      - name: LAT
+        description: Latitude of the location in decimal degrees.
+        expr: LAT
+        data_type: NUMBER(9,6)
+        access_modifier: public_access
+        sample_values:
+          - '14.554700'
+          - '14.588600'
+          - '14.520600'
+      - name: LON
+        description: Longitude coordinate representing the geographical location of a weather observation point.
+        expr: LON
+        data_type: NUMBER(9,6)
+        access_modifier: public_access
+        sample_values:
+          - '121.015300'
+          - '120.974200'
+          - '121.053700'
+      - name: PRECIP_PROB
+        description: The probability of precipitation, expressed as a percentage, indicating the likelihood of rain or other forms of moisture falling from the sky on a given day.
+        expr: PRECIP_PROB
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '23'
+          - '7'
+          - '10'
+      - name: SUITABILITY
+        description: A measure of how suitable the weather is for a particular activity or condition, with higher values indicating more favorable conditions.
+        expr: SUITABILITY
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '0.57525'
+          - '0.53'
+          - '0.51475'
+      - name: TEMP_C
+        description: The temperature in degrees Celsius.
+        expr: TEMP_C
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '25.9'
+          - '26'
+          - '26.6'
+      - name: WIND_KPH
+        description: The average wind speed in kilometers per hour for a given weather condition.
+        expr: WIND_KPH
+        data_type: FLOAT
+        access_modifier: public_access
+        sample_values:
+          - '11.3'
+          - '8.8'
+          - '12'
