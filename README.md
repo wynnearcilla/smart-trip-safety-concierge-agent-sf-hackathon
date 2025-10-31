@@ -31,7 +31,22 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
 
 ---
 
+# 2) Parse the documents for Cortex Search.
+
 ---
 
-CREATE SCHEMA IF NOT EXISTS TOURISM_DB.RAW;
-CREATE SCHEMA IF NOT EXISTS TOURISM_DB.CURATED;
+# 3) Create the semantic views for the Cortex Analyst.
+
+---
+
+# 4) Create the Cortex Search Service.
+
+---
+
+# 5) Create the Cortex Agent.
+
+---
+
+# 6) 
+
+---
