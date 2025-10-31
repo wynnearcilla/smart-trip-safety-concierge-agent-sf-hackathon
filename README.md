@@ -231,13 +231,17 @@ The TRANSIT_NEXT_DEPARTURE_SEM semantic view, located in TOURISM_DB.CURATED, ser
 4. For the Cortex Search Services, add the `SEARCH_PDF` with the following `Description`. Set the `PAGE_CONTENT` as the ID column and the `FILENAME' as the Title column.
      - This tool contains and will provide the information of different activities and accommodations of all the cities in Metro Manila
 
-5. Add 'BOOKING_AGREEMENT' custom tool with the following settings.
-![Alt text](images/diagram.png)
+5. Add 'BOOKING_AGREEMENT' custom tool with the following settings. 
+     ![Booking Agreement 1](images/booking_agreement_1.png)
+     ![Booking Agreement 2](images/booking_agreement_2.png)
+     ![Booking Agreement 3](images/booking_agreement_3.png)
+     ![Booking Agreement 4](images/booking_agreement_4.png)
 
-6. Add 'INSERT_BOOKING' custom tool with the following settings.
-![Alt text](images/diagram.png)
+7. Add 'INSERT_BOOKING' custom tool with the following settings.
+     ![Insert Booking 1](images/insert_booking_1.png)
+     ![Insert Booking 2](images/insert_booking_2.png)
 
-7. For the Orchestration, copy the following text as the Planning Instructions.
+9. For the Orchestration, copy the following text as the Planning Instructions.
 
 GENERAL INSTRUCTIONS:
 - Focus responses strictly on the available datasets provided; do not reference information outside of the datasets.
@@ -284,6 +288,6 @@ WEATHER SUITABILITY:
 
 ---
 
-## 6) Open the Snowflake Intelligence 
+## 6) Open the Snowflake Intelligence. Select the Agent as `TOURAGENT`. You may start with the suggested prompts or example questions provided in Step 5.8.
 
 ---
