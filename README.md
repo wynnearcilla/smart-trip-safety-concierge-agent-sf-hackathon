@@ -36,7 +36,7 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
 ---
 
 # 3) Create the semantic views for the Cortex Analyst.
-
+https://drive.google.com/file/d/19Q6E85FlF-Pt1kXsgGs9E0ZzKEqF93JS/view?usp=sharing
 ---
 
 # 4) Create the Cortex Search Service.
