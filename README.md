@@ -119,7 +119,7 @@ A ready-to-use Snowflake data environment for analytics and visualization — se
      - `HOTEL_RECO_SEM`
      - `POI_SEM`
      - `HOLIDAYS_SEM`
-            - HOLIDAYS:
+               HOLIDAYS:
                Database: TOURISM_DB, Schema: CURATED
                Contains information about public holidays in the Philippines, including both local and English names of the holidays and their corresponding dates.
                Useful for business planning, scheduling, and time-off management in the Philippine context.
