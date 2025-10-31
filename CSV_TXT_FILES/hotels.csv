@@ -1,0 +1,11 @@
+hotel_id,name,lat,lon,city,area,stars,price_night_php,refundable,rating,amenities,safety_score
+H-MAK-001,Makati Skyline Hotel,14.5536,121.0198,Makati,Legazpi Village,4,5100,True,8.7,pool|gym|wifi|breakfast,0.88
+H-MAK-002,Greenbelt Suites,14.5513,121.0185,Makati,San Lorenzo,3,4200,True,8.2,wifi|breakfast,0.86
+H-BGC-001,BGC Central Hotel,14.5498,121.0539,Taguig,BGC,4,5400,False,8.9,gym|wifi|breakfast|bar,0.9
+H-BGC-002,High Street Residences,14.553,121.0553,Taguig,BGC,5,7800,True,9.1,pool|gym|wifi|spa|breakfast,0.92
+H-INT-001,Intramuros Heritage Inn,14.589,120.9789,Manila,Intramuros,3,3800,True,8.4,wifi|breakfast,0.75
+H-MLA-001,Bayfront Seaview,14.5743,120.9838,Manila,Ermita,4,4700,False,8.3,wifi|breakfast|bar,0.72
+H-MOA-001,Seaside Bay Hotel,14.535,120.9822,Pasay,MOA Complex,4,5200,True,8.5,pool|wifi|breakfast,0.8
+H-ORT-001,Ortigas Business Hotel,14.5869,121.0606,Mandaluyong,Ortigas,4,4600,True,8.1,wifi|gym|breakfast,0.82
+H-QC-001,QC North Suites,14.6549,121.0317,Quezon City,North Ave,3,3500,True,7.9,wifi|breakfast,0.78
+H-AIR-001,NAIA Transit Hotel,14.5122,121.0196,Pasay,NAIA,3,3300,True,7.6,wifi,0.8

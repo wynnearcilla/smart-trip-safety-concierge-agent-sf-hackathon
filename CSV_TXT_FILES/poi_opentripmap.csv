@@ -1,0 +1,7 @@
+fetched_ts,poi_id,name,kinds,osm_id,lat,lon,rate,wikidata,raw
+2025-10-15T00:59:55+08:00,POI-001,National Museum of Fine Arts,"museums,cultural",OSM-1001,14.5889,120.9819,9.0,Q12345,{}
+2025-10-15T00:59:55+08:00,POI-002,Ayala Museum,"museums,cultural",OSM-1002,14.5536,121.0223,9.2,Q67890,{}
+2025-10-15T00:59:55+08:00,POI-003,The Mind Museum,"museums,cultural",OSM-1003,14.5505,121.0544,8.9,Q22222,{}
+2025-10-15T00:59:55+08:00,POI-004,Café Intramuros,"foods,restaurants",OSM-2001,14.5895,120.975,7.5,,{}
+2025-10-15T00:59:55+08:00,POI-005,BGC Central Park,"parks,outdoors",OSM-3001,14.5512,121.0523,8.1,,{}
+2025-10-15T00:59:55+08:00,POI-006,National Museum of Anthropology,"museums,cultural",OSM-1004,14.588,120.9812,8.6,Q99999,{}

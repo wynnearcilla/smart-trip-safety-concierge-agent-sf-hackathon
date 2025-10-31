@@ -1,0 +1,13 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,raw
+MRT3,WKD,MRT3-N-0800,Taft→Cubao NB,0,{}
+MRT3,WKD,MRT3-N-0830,Taft→Cubao NB,0,{}
+MRT3,WKD,MRT3-S-0815,Cubao→Taft SB,1,{}
+MRT3,WKD,MRT3-S-0845,Cubao→Taft SB,1,{}
+LRT1,WKD,LRT1-N-0810,Baclaran→Monumento NB,0,{}
+LRT1,WKD,LRT1-S-0835,Monumento→Baclaran SB,1,{}
+LRT2,WKD,LRT2-E-0900,Recto→Santolan EB,0,{}
+LRT2,WKD,LRT2-W-0930,Santolan→Recto WB,1,{}
+EDSA,WKD,BRT-AYALA-N-0800,MOA→Quezon Ave,0,{}
+EDSA,WKD,BRT-QAVE-S-0830,Quezon Ave→MOA,1,{}
+P2P,WKD,P2P-S-0700,Alabang→Ortigas,0,{}
+P2P,WKD,P2P-N-1800,Trinoma→Ortigas,1,{}

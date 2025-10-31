@@ -1,0 +1,56 @@
+src_file,incident_id,incident_ts,category,city,barangay,lat,lon,raw
+crime_incidents.csv,3001,2025-07-06T13:00:00+08:00,Vandalism,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3002,2025-07-11T23:00:00+08:00,Robbery,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3003,2025-07-17T08:00:00+08:00,Theft,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3004,2025-07-24T05:00:00+08:00,Robbery,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3005,2025-07-29T21:00:00+08:00,Vandalism,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3006,2025-07-30T20:00:00+08:00,Vandalism,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3007,2025-08-06T17:00:00+08:00,Assault,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3008,2025-08-14T20:00:00+08:00,Theft,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3009,2025-08-22T22:00:00+08:00,Vandalism,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3010,2025-08-21T07:00:00+08:00,Vandalism,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3011,2025-08-27T04:00:00+08:00,Theft,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3012,2025-09-04T08:00:00+08:00,Assault,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3013,2025-09-06T14:00:00+08:00,Vandalism,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3014,2025-09-13T05:00:00+08:00,Assault,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3015,2025-09-17T08:00:00+08:00,Robbery,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3016,2025-09-19T02:00:00+08:00,Robbery,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3017,2025-09-28T00:00:00+08:00,Theft,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3018,2025-10-04T01:00:00+08:00,Pickpocket,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3019,2025-10-11T19:00:00+08:00,Assault,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3020,2025-10-16T21:00:00+08:00,Theft,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3021,2025-10-18T20:00:00+08:00,Theft,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3022,2025-10-22T11:00:00+08:00,Pickpocket,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3023,2025-10-31T00:00:00+08:00,Vandalism,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3024,2025-10-31T20:00:00+08:00,Vandalism,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3025,2025-11-09T03:00:00+08:00,Pickpocket,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3026,2025-11-16T20:00:00+08:00,Robbery,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3027,2025-11-12T00:00:00+08:00,Assault,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3028,2025-11-22T05:00:00+08:00,Assault,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3029,2025-11-23T13:00:00+08:00,Theft,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3030,2025-11-29T21:00:00+08:00,Pickpocket,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3031,2025-12-03T18:00:00+08:00,Theft,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3032,2025-12-13T14:00:00+08:00,Vandalism,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3033,2025-12-17T22:00:00+08:00,Assault,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3034,2025-12-19T17:00:00+08:00,Vandalism,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3035,2025-12-26T15:00:00+08:00,Pickpocket,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3036,2026-01-04T15:00:00+08:00,Assault,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3037,2026-01-07T19:00:00+08:00,Vandalism,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3038,2026-01-15T20:00:00+08:00,Robbery,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3039,2026-01-16T21:00:00+08:00,Robbery,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3040,2026-01-23T17:00:00+08:00,Assault,Taguig,BGC,14.5505,121.0544,{}
+crime_incidents.csv,3041,2026-01-23T09:00:00+08:00,Assault,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3042,2026-01-29T14:00:00+08:00,Vandalism,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3043,2026-02-07T14:00:00+08:00,Robbery,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3044,2026-02-06T16:00:00+08:00,Vandalism,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3045,2026-02-15T01:00:00+08:00,Pickpocket,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3046,2026-02-13T06:00:00+08:00,Pickpocket,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3047,2026-02-22T00:00:00+08:00,Robbery,Manila,Intramuros,14.5886,120.9742,{}
+crime_incidents.csv,3048,2026-02-28T09:00:00+08:00,Robbery,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3049,2026-03-04T01:00:00+08:00,Theft,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3050,2026-03-06T02:00:00+08:00,Theft,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3051,2026-03-14T04:00:00+08:00,Theft,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3052,2026-03-22T07:00:00+08:00,Assault,Manila,Ermita,14.5815,120.981,{}
+crime_incidents.csv,3053,2026-03-20T20:00:00+08:00,Vandalism,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3054,2026-03-28T13:00:00+08:00,Theft,Makati,Legazpi Village,14.5532,121.0189,{}
+crime_incidents.csv,3055,2026-04-03T15:00:00+08:00,Vandalism,Manila,Intramuros,14.5886,120.9742,{}
